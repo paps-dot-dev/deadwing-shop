@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-image': "url('/bowlby-scream.jpeg')",
+        'shop-header': "url('/deadwing-promo-band.jpeg')",
       },
     },
   },
