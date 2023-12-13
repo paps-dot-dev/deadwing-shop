@@ -14,8 +14,8 @@ function SplashScreen() {
 
   return (
     <div className='h-screen flex flex-col justify-center items-center bg-black'>
-      <video controls autoplay muted className=''>
-        <source src={teaser} type='video/mp4' />
+      <video autoPlay controls>
+        <source src='/teaser.mp4' type='video/mp4' />
       </video>
     </div>
   )

@@ -1,11 +1,29 @@
 import React from 'react'
+import { useState } from 'react'
 import placeholder from '../../../assets/images/shirt.png'
 import { MdArrowCircleRight } from 'react-icons/md'
+import ProductModal from './ProductModal'
 
 function ProductCard({ data, updateCart }) {
-  const handleClick = () => {
-    const product = data
+  const handleClick = (size) => {
+    const product = {
+      name: data.name,
+      size: size,
+      price: data.price,
+      image: data.image,
+    }
     updateCart(product)
+    closeModal()
+  }
+
+  let [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
   }
   return (
     <div className='flex flex-col justify-center items-center h-[800px]  mx-4'>
@@ -21,14 +39,20 @@ function ProductCard({ data, updateCart }) {
             <p className=' mx-2 text-lg font-light'>{data.price}.00</p>
             <span className='text-sm font-thin'>USD</span>
           </div>
-          <MdArrowCircleRight className='text-6xl hover:text-blue-700 hover:translate-x-2 duration-150 ease-in-out hover:animate-pulse' />
         </div>
       </div>
       <button
-        onClick={handleClick}
-        className='mt-8 bg-gradient-to-br from-blue-700 to-indigo-500 p-4 w-full rounded-xl'>
-        Add to Cart
+        onClick={openModal}
+        className='mt-8 bg-gradient-to-br from-blue-700 to-indigo-500 p-4 w-full rounded-xl hover:text-white hover:-translate-y-1 duration-150 ease-in-out'>
+        View Details
       </button>
+      <ProductModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        openModal={openModal}
+        data={data}
+        handleClick={handleClick}
+      />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Shop from './screens/Shop/Shop'
 
 function App() {
   return (
-    <div className='bg-grunge bg-contain md:bg-cover md:h-screen text-white'>
+    <>
       <Router>
         <Routes>
           <Route path='/' element={<SplashScreen />} />
@@ -13,7 +13,7 @@ function App() {
           <Route path='/shop' element={<Shop />} />
         </Routes>
       </Router>
-    </div>
+    </>
   )
 }
 
