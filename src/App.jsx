@@ -5,7 +5,7 @@ import Shop from './screens/Shop/Shop'
 
 function App() {
   return (
-    <div className='bg-gray-800 h-screen text-white'>
+    <div className='bg-grunge bg-contain md:bg-cover md:h-screen text-white'>
       <Router>
         <Routes>
           <Route path='/' element={<SplashScreen />} />

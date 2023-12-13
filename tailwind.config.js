@@ -6,6 +6,7 @@ export default {
       backgroundImage: {
         'hero-image': "url('/bowlby-scream.jpeg')",
         'shop-header': "url('/deadwing-promo-band.jpeg')",
+        grunge: "url('/grunge.png')",
       },
     },
   },
