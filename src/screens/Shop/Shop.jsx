@@ -44,7 +44,7 @@ function Shop() {
         </Link>
         <CartButton showCart={showCart} count={cartItems.length} />
       </header>
-      <main className='flex flex-col justify-center items-center bg-grunge'>
+      <main className='flex flex-col justify-center items-center bg-grunge h-screen'>
         <h1 className='text-5xl font-semibold text-center mt-8 bg-white text-black p-4 rounded-md'>
           Available for Pre-Order
         </h1>
